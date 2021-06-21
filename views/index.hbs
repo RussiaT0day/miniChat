@@ -1,0 +1,53 @@
+<div class="main-information-text">
+  {{#if user}}
+  <div class="new-messege form">
+    <div class="title">
+      <h1>Прощебетать!</h1>
+    </div>
+    <div class="message">{{message}}</div>
+    <form method="POST" action="/">
+      <textarea name="text" cols="20" rows="3"></textarea>
+      <button>Прощебетать</button>
+    </form>
+  </div>
+  {{/if}}
+  {{#unless user}}
+  <p>Что бы отправить свой щебет, пожайлуста, зарегистрируйтесь!</p>
+  {{/unless}}
+</div>
+<h2>Последние щебеты</h2>
+<div class="all-messageB">
+  {{#each userMessage}}
+  <div class="messageB" data-id="{{this.id}}">
+    <div class="messageB-left">
+      <div class="messageB-left-img">
+        <img src="{{this.img}}" alt="Фото к описанию">
+      </div>
+      <div class="messageB-img-date">
+        {{this.data}}
+      </div>
+    </div>
+    <div class="messageB-main">
+      <div class="messageB-main-name">
+        <h3>{{this.nameCreated}} щебечет:</h3>
+      </div>
+      <div class="messageB-main-text">
+        <p>{{this.text}}</p>
+      </div>
+    </div>
+    <div class="messageB-tools">
+      <div class="messageB-tools-likes">
+        <div id="{{this.id}}"class="messageB-tools-top-count">
+          {{this.likes.length}}
+        </div>
+        <div class="messageB-tools-top-like" data-name="like" data-id="{{this.id}}">
+          <img src="/img/icon/heart.png"></img>
+        </div>
+      </div>
+      <div class="messageB-tools-bootom">
+      </div>
+    </div>
+  </div>
+
+  {{/each}}
+</div>

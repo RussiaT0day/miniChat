@@ -1,0 +1,122 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 0 10px;
+  background-color: rgb(230, 229, 228);
+}
+h2{
+  font-size: 26px;
+}
+nav{
+  display: flex
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li{
+  margin:0px 5px;
+  font-size: 16px;
+}
+header nav ul li a{
+  color: blue; 
+}
+
+.form form{
+  display: flex;
+  flex-direction: column;
+}
+.form form input,button,textarea{
+  font-size: 16px;
+  padding: 5px 2px;
+  margin-bottom: 10px;
+}
+.messageB{
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.messageB-left{
+  position: relative;
+}
+.messageB-left-img{
+  
+}
+.messageB-left-img img{
+  max-height: 100px;
+
+}
+.messageB-img-date{
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+.messageB-main{
+  margin: 0 10px;
+  flex-grow: 1;
+}
+.messageB-main-name{
+  margin-bottom: 20px;
+  line-height: 0
+}
+
+.messageB-main-text{
+  line-height: 0
+
+}
+.messageB-tools{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.messageB-tools-likes{
+  display: flex;
+  justify-content: space-around;
+}
+.messageB-tools-likes div{
+  margin-right: 10px;
+}
+.messageB-tools-top{
+  display: flex;
+  justify-content: space-around;
+}
+.messageB-tools-top-count{
+
+}
+.messageB-tools-top-like {
+  cursor:pointer;
+  
+}
+.messageB-tools-bootom{
+  display: flex;
+  justify-content: space-between;
+
+}
+.messageB-tools-botoom-edit {
+  cursor:pointer;
+  margin-right: 5px;
+}
+.messageB-tools-top-delete {
+  cursor:pointer;
+}
+.messageB-tools-top-like img,
+.messageB-tools-top-delete img,
+.messageB-tools-botoom-edit img{
+  max-width: 24px;  
+
+}

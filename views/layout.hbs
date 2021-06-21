@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script defer src="javascripts/application.js"></script>
+</head>
+
+<body>
+  <header>
+
+    <div class="logo">
+      <h2>Щебетатель</h2>
+    </div>
+    <nav>
+      <ul>
+        {{#if user}}
+        <li>
+          Привет, {{user}}! 
+        </li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/profile">Личный кабинет</a></li>
+        <li><a href="/login/exit">Выход</a></li>
+        {{/if}}
+
+        {{#unless user}}
+        <li><a href="/login">Вход</a></li>
+        <li><a href="/registration">Регистрация</a></li>
+        {{/unless}}
+      </ul>
+
+    </nav>
+  </header>
+  {{{body}}}
+</body>
+
+</html>
